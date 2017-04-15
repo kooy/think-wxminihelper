@@ -96,7 +96,7 @@ class WXLoginHelper {
         $session3rd = $this->randomFromDev(16);
 
         $data['session3rd'] = $session3rd;
-        cache($session3rd, $data['openId'] . $sessionKey);
+        session($session3rd, $data['openId'] . $sessionKey);
 
         return $data;
     }
